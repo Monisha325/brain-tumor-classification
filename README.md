@@ -1,10 +1,23 @@
 # 🧠 Brain Tumor Classification from MRI using CNNs
 
-An end-to-end deep learning system that classifies brain MRI images into tumor categories using Convolutional Neural Networks (CNNs), with explainability and live deployment.
+An end-to-end deep learning system that **identifies and classifies brain tumors from MRI images** using CNN-based transfer learning, with **explainable AI (Grad-CAM)** and **full-stack deployment**.
+
+> 🔍 Built as a **decision-support system** using medical imaging, deep learning, and modern ML deployment practices.
 
 ---
 
-## 🌍 Live Demo
+## ⭐ Key Highlights
+
+- CNN-based brain tumor classification from MRI images  
+- Transfer learning with **EfficientNet-B0** and **DenseNet-121**  
+- Explainable AI using **Grad-CAM** for visual interpretation  
+- REST API deployed using **FastAPI**  
+- Interactive frontend deployed using **Streamlit**  
+- Fully hosted and publicly accessible system  
+
+---
+
+## 🌍 Live Deployment
 
 - **Streamlit Web App (Frontend):**  
   https://brain-tumor-classification-qs2tddfuoe264cnrdqx3to.streamlit.app/
@@ -17,16 +30,43 @@ An end-to-end deep learning system that classifies brain MRI images into tumor c
 
 ---
 
-## 📌 Problem Statement
+## 🚀 Project Overview
 
-Brain tumor diagnosis from MRI scans is time-consuming and requires expert radiologists.  
-This project aims to assist radiologists by automatically classifying brain MRI images using deep learning models.
+Manual analysis of brain MRI scans is time-consuming and requires expert radiologists.  
+This project aims to assist medical professionals by **automatically classifying brain MRI images** into tumor categories using Convolutional Neural Networks (CNNs).
+
+The system focuses on **accuracy, interpretability, and deployability**.
+
+---
+
+## 🧠 Solution Approach
+
+1. Dataset preparation and preprocessing  
+2. Data augmentation for robustness  
+3. CNN-based model training using transfer learning  
+4. Model evaluation using medical classification metrics  
+5. Explainable AI using Grad-CAM  
+6. Backend deployment using FastAPI  
+7. Interactive web interface using Streamlit  
+
+---
+
+## 🛠 Tech Stack
+
+- **Python**
+- **PyTorch**
+- **Torchvision**
+- **NumPy**
+- **Scikit-learn**
+- **OpenCV**
+- **FastAPI**
+- **Streamlit**
 
 ---
 
 ## 🧠 Tumor Classes
 
-The model predicts one of the following classes:
+The model classifies MRI images into the following categories:
 
 - Glioma  
 - Meningioma  
@@ -35,123 +75,79 @@ The model predicts one of the following classes:
 
 ---
 
-## 🚀 Models Used
+## 📂 Project Structure
 
-### Primary Model
-- EfficientNet-B0  
-- Selected for high accuracy with fewer parameters
-
-### Secondary Model
-- DenseNet-121  
-- Used for architectural comparison
-
----
-
-## 🔍 Explainable AI (Grad-CAM)
-
-Grad-CAM (Gradient-weighted Class Activation Mapping) highlights the regions of MRI images that most influence the model’s prediction, improving interpretability and trust.
-
----
-
-## 📊 Model Evaluation
-
-The model is evaluated using the following metrics:
-
-- Accuracy  
-- Precision  
-- Recall  
-- F1-score  
-- Confusion Matrix  
-
-**Recall is emphasized** due to the importance of minimizing false negatives in medical applications.
-
----
-
-## 🌐 Backend API (FastAPI)
-
-### Endpoint
-POST /predict
-
-
-### Input
-- Brain MRI image (JPG / PNG)
-
-### Output
-```json
-{
-  "prediction": "Meningioma",
-  "confidence": 0.72
-}
-🖥️ Frontend (Streamlit)
-The Streamlit web application provides an interactive interface to:
-
-Upload MRI images
-
-Receive predicted tumor class
-
-View prediction confidence
-
-The frontend communicates with the FastAPI backend for inference.
-
-🧱 Project Structure
+```text
 brain_tumor/
-├── api/                     # FastAPI backend
+│
+├── api/                       # FastAPI backend
 │   └── main.py
 │
-├── app/                     # Streamlit frontend
+├── app/                       # Streamlit frontend
 │   └── app.py
 │
-├── data/                    # Dataset utilities (dataset not pushed)
+├── data/                      # Dataset utilities (dataset not pushed)
 │   ├── dataset.py
 │   ├── loader.py
 │   └── transforms.py
 │
-├── models/                  # Model architectures
+├── models/                    # Model architectures
 │   ├── efficientnet.py
 │   └── densenet.py
 │
-├── training/                # Training scripts
+├── training/                  # Training scripts
 │   ├── train.py
 │   └── train_densenet.py
 │
-├── evaluation/              # Evaluation and metrics
+├── evaluation/                # Evaluation and metrics
 │   ├── metrics.py
 │   └── evaluate.py
 │
-├── explainability/          # Explainable AI (Grad-CAM)
+├── explainability/            # Grad-CAM implementation
 │   ├── gradcam.py
 │   └── test_gradcam.py
 │
-├── checkpoints/             # Trained model weights
+├── checkpoints/               # Trained model weights
 │   ├── efficientnet_best.pth
 │   └── densenet_best.pth
 │
 ├── requirements.txt
 └── README.md
-▶️ Run Locally (Optional)
-Install dependencies
+📊 Model Performance
+The models were evaluated using standard medical image classification metrics.
+
+Model	Accuracy	Recall	F1-Score
+EfficientNet-B0	High	High	High
+DenseNet-121	Comparable	High	High
+Recall is prioritized to minimize false negatives, which is critical in medical applications.
+
+🔍 Explainable AI (Grad-CAM)
+Grad-CAM visualizes the regions of MRI images that most influence the model’s predictions, helping validate that the model focuses on tumor-relevant areas.
+
+🌐 API Details (FastAPI)
+Endpoint
+POST /predict
+Input
+Brain MRI image (JPG / PNG)
+
+Output
+{
+  "prediction": "Meningioma",
+  "confidence": 0.72
+}
+▶️ Running the Application Locally
+1️⃣ Install Dependencies
 pip install -r requirements.txt
-Run backend
+2️⃣ Start Backend API
 uvicorn api.main:app --reload
-Run frontend
+3️⃣ Start Streamlit App
 streamlit run app/app.py
+
 ⚠️ Disclaimer
-This project is intended for educational and research purposes only and must not be used for clinical decision-making.
+This project is intended for educational and research purposes only.
+It is not a medical diagnostic system and should not be used for clinical decision-making.
 
 👤 Author
 Monisha Patnana
 3rd Year Undergraduate Student
 GITAM University
-
-⭐ Key Highlights
-End-to-end ML system
-
-CNN-based medical image classification
-
-Explainable AI using Grad-CAM
-
-FastAPI backend deployment
-
-Streamlit frontend deployment
-
-Fully hosted and publicly accessible
