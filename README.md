@@ -166,7 +166,9 @@ It is not a medical diagnostic system and should not be used for clinical decisi
 
 ---
 
-##👤 Author
-Monisha Patnana
-3rd Year Undergraduate Student
+## 👤 Author
+
+**Monisha Patnana**  
+3rd Year Undergraduate Student  
 GITAM University
+
