@@ -63,8 +63,8 @@ if uploaded_file is not None:
 # -------------------------
 # Disclaimer
 # -------------------------
-st.markdown("---")
-st.warning(
-    "⚠️ **Disclaimer:** This application is intended for educational and "
-    "research purposes only. It is NOT a medical diagnostic tool."
-)
+# st.markdown("---")
+# st.warning(
+#     "⚠️ **Disclaimer:** This application is intended for educational and "
+#     "research purposes only. It is NOT a medical diagnostic tool."
+# )
