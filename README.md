@@ -113,7 +113,10 @@ brain_tumor/
 │
 ├── requirements.txt
 └── README.md
-📊 Model Performance
+```
+---
+
+## 📊 Model Performance
 The models were evaluated using standard medical image classification metrics.
 
 Model	Accuracy	Recall	F1-Score
@@ -121,7 +124,9 @@ EfficientNet-B0	High	High	High
 DenseNet-121	Comparable	High	High
 Recall is prioritized to minimize false negatives, which is critical in medical applications.
 
-🔍 Explainable AI (Grad-CAM)
+---
+
+##🔍 Explainable AI (Grad-CAM)
 Grad-CAM visualizes the regions of MRI images that most influence the model’s predictions, helping validate that the model focuses on tumor-relevant areas.
 
 🌐 API Details (FastAPI)
@@ -135,7 +140,10 @@ Output
   "prediction": "Meningioma",
   "confidence": 0.72
 }
-▶️ Running the Application Locally
+
+---
+
+## ▶️ Running the Application Locally
 1️⃣ Install Dependencies
 pip install -r requirements.txt
 2️⃣ Start Backend API
@@ -143,11 +151,15 @@ uvicorn api.main:app --reload
 3️⃣ Start Streamlit App
 streamlit run app/app.py
 
-⚠️ Disclaimer
+---
+
+## ⚠️ Disclaimer
 This project is intended for educational and research purposes only.
 It is not a medical diagnostic system and should not be used for clinical decision-making.
 
-👤 Author
+---
+
+#3 👤 Author
 Monisha Patnana
 3rd Year Undergraduate Student
 GITAM University
