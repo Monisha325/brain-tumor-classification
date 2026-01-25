@@ -1,5 +1,5 @@
-torch==2.5.1
-torchvision==0.20.1
+torch
+torchvision
 numpy
 pillow
 opencv-python-headless
@@ -8,5 +8,3 @@ fastapi
 uvicorn
 streamlit
 requests
-
-
