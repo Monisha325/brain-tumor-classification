@@ -147,18 +147,26 @@ POST /predict
   "prediction": "Meningioma",
   "confidence": 0.72
 }
-▶️ Running the Application Locally
-1️⃣ Install Dependencies
+```
+---
+
+## ▶️ Running the Application Locally
+### 1️⃣ Install Dependencies
 pip install -r requirements.txt
-2️⃣ Start Backend API
+### 2️⃣ Start Backend API
 uvicorn api.main:app --reload
-3️⃣ Start Streamlit App
+### 3️⃣ Start Streamlit App
 streamlit run app/app.py
-⚠️ Disclaimer
+
+---
+
+## ⚠️ Disclaimer
 This project is intended for educational and research purposes only.
 It is not a medical diagnostic system and should not be used for clinical decision-making.
 
-👤 Author
+---
+
+##👤 Author
 Monisha Patnana
 3rd Year Undergraduate Student
 GITAM University
