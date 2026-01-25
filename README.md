@@ -1,6 +1,6 @@
 # 🧠 Brain Tumor Classification from MRI using CNNs
 
-An end-to-end deep learning application that classifies brain MRI images into tumor categories using Convolutional Neural Networks (CNNs), with explainability and live deployment.
+An end-to-end deep learning system that classifies brain MRI images into tumor categories using Convolutional Neural Networks (CNNs), with explainability and live deployment.
 
 ---
 
@@ -19,10 +19,8 @@ An end-to-end deep learning application that classifies brain MRI images into tu
 
 ## 📌 Problem Statement
 
-Brain tumor diagnosis from MRI scans is a time-consuming and expert-driven process.  
+Brain tumor diagnosis from MRI scans is time-consuming and requires expert radiologists.  
 This project aims to assist radiologists by automatically classifying brain MRI images using deep learning models.
-
-> ⚠️ This system is intended as a **decision-support tool**, not a diagnostic system.
 
 ---
 
@@ -39,34 +37,25 @@ The model predicts one of the following classes:
 
 ## 🚀 Models Used
 
-### 🔹 Primary Model
-- **EfficientNet-B0**
+### Primary Model
+- EfficientNet-B0  
 - Selected for high accuracy with fewer parameters
 
-### 🔹 Secondary Model
-- **DenseNet-121**
-- Used for performance comparison
-
-### 🔹 Training Strategy
-- Transfer learning using ImageNet pretrained weights  
-- Fine-tuning on MRI dataset
+### Secondary Model
+- DenseNet-121  
+- Used for architectural comparison
 
 ---
 
 ## 🔍 Explainable AI (Grad-CAM)
 
-Grad-CAM is used to visualize important regions of the MRI image that influence the model’s prediction.
-
-This helps in:
-- Improving interpretability
-- Building trust in medical AI systems
-- Validating model focus on tumor regions
+Grad-CAM (Gradient-weighted Class Activation Mapping) highlights the regions of MRI images that most influence the model’s prediction, improving interpretability and trust.
 
 ---
 
 ## 📊 Model Evaluation
 
-The model is evaluated using standard classification metrics:
+The model is evaluated using the following metrics:
 
 - Accuracy  
 - Precision  
@@ -74,13 +63,11 @@ The model is evaluated using standard classification metrics:
 - F1-score  
 - Confusion Matrix  
 
-> **Recall is prioritized** due to the critical nature of false negatives in medical applications.
+**Recall is emphasized** due to the importance of minimizing false negatives in medical applications.
 
 ---
 
 ## 🌐 Backend API (FastAPI)
-
-The trained model is deployed as a REST API using FastAPI.
 
 ### Endpoint
 POST /predict
@@ -96,7 +83,7 @@ POST /predict
   "confidence": 0.72
 }
 🖥️ Frontend (Streamlit)
-A Streamlit web application provides an interactive interface to:
+The Streamlit web application provides an interactive interface to:
 
 Upload MRI images
 
@@ -142,15 +129,14 @@ brain_tumor/
 ├── requirements.txt
 └── README.md
 ▶️ Run Locally (Optional)
-Install Dependencies
+Install dependencies
 pip install -r requirements.txt
-Start Backend
+Run backend
 uvicorn api.main:app --reload
-Start Frontend
+Run frontend
 streamlit run app/app.py
 ⚠️ Disclaimer
-This project is intended only for educational and research purposes.
-It must not be used for clinical or diagnostic decision-making.
+This project is intended for educational and research purposes only and must not be used for clinical decision-making.
 
 👤 Author
 Monisha Patnana
