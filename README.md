@@ -17,6 +17,37 @@ An end-to-end deep learning system that **identifies and classifies brain tumors
 
 ---
 
+## 📁 Dataset
+
+The dataset is **not included in this repository** due to size constraints.
+
+You can download the Brain MRI dataset from Kaggle:
+
+🔗 **Kaggle Dataset Link:**  
+https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection
+
+### Dataset Classes
+- Glioma
+- Meningioma
+- Pituitary Tumor
+- No Tumor
+
+### Dataset Structure (after download)
+```text
+data/
+├── Training/
+│   ├── glioma/
+│   ├── meningioma/
+│   ├── pituitary/
+│   └── notumor/
+└── Testing/
+    ├── glioma/
+    ├── meningioma/
+    ├── pituitary/
+    └── notumor/
+```
+---
+
 ## 🌍 Live Deployment
 
 - **Streamlit Web App (Frontend):**  
@@ -118,6 +149,31 @@ brain_tumor/
 
 ## 📊 Model Performance
 The models were evaluated using standard medical image classification metrics.
+
+### Metrics Used
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+### Sample Results (EfficientNet-B0)
+
+| Metric | Score |
+|------|------|
+| Accuracy | 87% (0.87) |
+| Precision | 88% (0.88) |
+| Recall | 87% (0.87) |
+| F1-score | 87% (0.87) |
+
+### Confusion Matrix
+```text
+[[234  55   3   7]
+ [  2 221  71  12]
+ [  1   1 402   1]
+ [  0  13   0 287]]
+```
+---
 
 Model	Accuracy	Recall	F1-Score
 EfficientNet-B0	High	High	High
