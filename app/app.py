@@ -26,7 +26,7 @@ uploaded_file = st.file_uploader(
 )
 
 # FastAPI endpoint
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://brain-tumor-classification-2911.onrender.com/predict"
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
