@@ -1,12 +1,10 @@
 # 🧠 Brain Tumor Classification from MRI using CNNs
 
-An end-to-end deep learning system to classify brain MRI images into tumor categories using Convolutional Neural Networks (CNNs), with a deployed backend API and an interactive frontend.
-
-This project is designed as a **decision-support system**, not a diagnostic tool.
+An end-to-end deep learning application that classifies brain MRI images into tumor categories using Convolutional Neural Networks (CNNs), with explainability and live deployment.
 
 ---
 
-## 🌍 Live Deployment
+## 🌍 Live Demo
 
 - **Streamlit Web App (Frontend):**  
   https://brain-tumor-classification-qs2tddfuoe264cnrdqx3to.streamlit.app/
@@ -21,14 +19,16 @@ This project is designed as a **decision-support system**, not a diagnostic tool
 
 ## 📌 Problem Statement
 
-Manual analysis of brain MRI scans is time-consuming and requires expert radiologists.  
-The objective of this project is to build an automated system that can assist in **classifying brain tumors from MRI images** using deep learning techniques.
+Brain tumor diagnosis from MRI scans is a time-consuming and expert-driven process.  
+This project aims to assist radiologists by automatically classifying brain MRI images using deep learning models.
+
+> ⚠️ This system is intended as a **decision-support tool**, not a diagnostic system.
 
 ---
 
 ## 🧠 Tumor Classes
 
-The model classifies MRI images into the following four categories:
+The model predicts one of the following classes:
 
 - Glioma  
 - Meningioma  
@@ -39,34 +39,34 @@ The model classifies MRI images into the following four categories:
 
 ## 🚀 Models Used
 
-### Primary Model
+### 🔹 Primary Model
 - **EfficientNet-B0**
-- Chosen for its strong performance and parameter efficiency
+- Selected for high accuracy with fewer parameters
 
-### Secondary Model
+### 🔹 Secondary Model
 - **DenseNet-121**
-- Used for architectural comparison
+- Used for performance comparison
 
-### Training Strategy
-- Transfer learning with ImageNet pretrained weights  
-- Fine-tuning final layers for medical image adaptation
+### 🔹 Training Strategy
+- Transfer learning using ImageNet pretrained weights  
+- Fine-tuning on MRI dataset
 
 ---
 
 ## 🔍 Explainable AI (Grad-CAM)
 
-Grad-CAM (Gradient-weighted Class Activation Mapping) is used to visualize the regions of MRI images that influence the model’s predictions.
+Grad-CAM is used to visualize important regions of the MRI image that influence the model’s prediction.
 
-This improves:
-- Interpretability of predictions
-- Trust in medical AI systems
-- Validation of model focus on tumor-relevant regions
+This helps in:
+- Improving interpretability
+- Building trust in medical AI systems
+- Validating model focus on tumor regions
 
 ---
 
-## 📊 Evaluation Metrics
+## 📊 Model Evaluation
 
-Model performance is evaluated using:
+The model is evaluated using standard classification metrics:
 
 - Accuracy  
 - Precision  
@@ -74,13 +74,13 @@ Model performance is evaluated using:
 - F1-score  
 - Confusion Matrix  
 
-**Recall is emphasized**, as false negatives are critical in healthcare-related applications.
+> **Recall is prioritized** due to the critical nature of false negatives in medical applications.
 
 ---
 
 ## 🌐 Backend API (FastAPI)
 
-The trained model is exposed through a FastAPI-based inference service.
+The trained model is deployed as a REST API using FastAPI.
 
 ### Endpoint
 POST /predict
@@ -95,23 +95,18 @@ POST /predict
   "prediction": "Meningioma",
   "confidence": 0.72
 }
-
 🖥️ Frontend (Streamlit)
-
-A Streamlit web application allows users to:
+A Streamlit web application provides an interactive interface to:
 
 Upload MRI images
 
 Receive predicted tumor class
 
-View confidence scores
+View prediction confidence
 
 The frontend communicates with the FastAPI backend for inference.
 
-🏗️ Project Structure
-
-The project follows a clean, modular architecture:
-
+🧱 Project Structure
 brain_tumor/
 ├── api/                     # FastAPI backend
 │   └── main.py
@@ -146,46 +141,31 @@ brain_tumor/
 │
 ├── requirements.txt
 └── README.md
-
 ▶️ Run Locally (Optional)
-Install dependencies
+Install Dependencies
 pip install -r requirements.txt
-
-Run backend
+Start Backend
 uvicorn api.main:app --reload
-
-Run frontend
+Start Frontend
 streamlit run app/app.py
-
 ⚠️ Disclaimer
-
-This project is intended for educational and research purposes only.
-It is not a medical diagnostic system and should not be used for clinical decision-making.
+This project is intended only for educational and research purposes.
+It must not be used for clinical or diagnostic decision-making.
 
 👤 Author
-
 Monisha Patnana
 3rd Year Undergraduate Student
 GITAM University
 
-This project was developed as a 3rd year academic and portfolio project, focusing on:
+⭐ Key Highlights
+End-to-end ML system
 
-Deep Learning
+CNN-based medical image classification
 
-Explainable AI
+Explainable AI using Grad-CAM
 
-Medical Image Analysis
+FastAPI backend deployment
 
-API Development
+Streamlit frontend deployment
 
-End-to-End ML Deployment
-
-
----
-
-## ✅ Final steps (last time)
-
-```bash
-git add README.md
-git commit -m "Add final README with live deployment links"
-git push
+Fully hosted and publicly accessible
