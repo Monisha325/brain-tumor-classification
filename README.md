@@ -171,18 +171,22 @@ The models were evaluated using standard medical image classification metrics.
 | F1-score   | 0.8712 (87%)    | 0.8624 (86%) |
 
 ### 🔹 Confusion Matrix (EfficientNet-B0)
+```text
 [[234 55 3 7]
 [ 2 221 71 12]
 [ 1 1 402 1]
 [ 0 13 0 287]]
-
+```
+---
 
 ### 🔹 Confusion Matrix (DenseNet-121)
+```text
 [[241 42 1 15]
 [ 11 216 41 38]
 [ 4 8 387 6]
 [ 2 9 0 289]]
-
+```
+---
 
 ### 🔹 Weighted Classification Summary
 
