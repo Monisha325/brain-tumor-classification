@@ -157,6 +157,8 @@ The models were evaluated using standard medical image classification metrics.
 - F1-score
 - Confusion Matrix
 
+---
+
 ## 📊 Model Evaluation Comparison
 
 ### 🔹 Overall Performance
@@ -168,21 +170,19 @@ The models were evaluated using standard medical image classification metrics.
 | Recall     | 0.8733 (87%)    | 0.8649 (86%) |
 | F1-score   | 0.8712 (87%)    | 0.8624 (86%) |
 
----
+### 🔹 Confusion Matrix (EfficientNet-B0)
+[[234 55 3 7]
+[ 2 221 71 12]
+[ 1 1 402 1]
+[ 0 13 0 287]]
 
-### 🔹 Confusion Matrix
 
-| EfficientNet-B0 | DenseNet-121 |
-|-----------------|--------------|
-| <pre>[[234  55   3   7]
-[  2 221  71  12]
-[  1   1 402   1]
-[  0  13   0 287]]</pre> | <pre>[[241  42   1  15]
-[ 11 216  41  38]
-[  4   8 387   6]
-[  2   9   0 289]]</pre> |
+### 🔹 Confusion Matrix (DenseNet-121)
+[[241 42 1 15]
+[ 11 216 41 38]
+[ 4 8 387 6]
+[ 2 9 0 289]]
 
----
 
 ### 🔹 Weighted Classification Summary
 
@@ -191,14 +191,13 @@ The models were evaluated using standard medical image classification metrics.
 | EfficientNet-B0  | 0.88      | 0.87   | 0.87     |
 | DenseNet-121     | 0.87      | 0.86   | 0.86     |
 
----
-
 ## 🏆 Final Model Selection
 
-EfficientNet-B0 was selected as the final deployment model because it consistently outperformed DenseNet-121 across all evaluation metrics, including accuracy, precision, recall, and F1-score.
+EfficientNet-B0 was selected as the final deployment model because it consistently achieved higher accuracy, precision, recall, and F1-score compared to DenseNet-121.
 
-In medical image classification, recall is especially critical to minimize false negatives (i.e., missed tumor cases). EfficientNet achieved higher recall while maintaining strong precision and overall balance, making it the more reliable and clinically suitable model for deployment.
+Since recall is critical in medical diagnosis to minimize false negatives, EfficientNet’s higher recall and balanced performance
 
+---
 
 ## 🔍 Explainable AI (Grad-CAM)
 
