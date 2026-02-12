@@ -157,30 +157,48 @@ The models were evaluated using standard medical image classification metrics.
 - F1-score
 - Confusion Matrix
 
-### Sample Results (EfficientNet-B0)
+## 📊 Model Evaluation Comparison
 
-| Metric | Score |
-|------|------|
-| Accuracy | 87% (0.87) |
-| Precision | 88% (0.88) |
-| Recall | 87% (0.87) |
-| F1-score | 87% (0.87) |
+### 🔹 Overall Performance
 
-### Confusion Matrix
-```text
-[[234  55   3   7]
- [  2 221  71  12]
- [  1   1 402   1]
- [  0  13   0 287]]
-```
----
-
-Model	Accuracy	Recall	F1-Score
-EfficientNet-B0	High	High	High
-DenseNet-121	Comparable	High	High
-Recall is prioritized to minimize false negatives, which is critical in medical applications.
+| Metric    | EfficientNet-B0 | DenseNet-121 |
+|------------|-----------------|--------------|
+| Accuracy   | 0.8733 (87%)    | 0.8649 (86%) |
+| Precision  | 0.8786 (88%)    | 0.8658 (86%) |
+| Recall     | 0.8733 (87%)    | 0.8649 (86%) |
+| F1-score   | 0.8712 (87%)    | 0.8624 (86%) |
 
 ---
+
+### 🔹 Confusion Matrix
+
+| EfficientNet-B0 | DenseNet-121 |
+|-----------------|--------------|
+| <pre>[[234  55   3   7]
+[  2 221  71  12]
+[  1   1 402   1]
+[  0  13   0 287]]</pre> | <pre>[[241  42   1  15]
+[ 11 216  41  38]
+[  4   8 387   6]
+[  2   9   0 289]]</pre> |
+
+---
+
+### 🔹 Weighted Classification Summary
+
+| Model            | Precision | Recall | F1-score |
+|------------------|-----------|--------|----------|
+| EfficientNet-B0  | 0.88      | 0.87   | 0.87     |
+| DenseNet-121     | 0.87      | 0.86   | 0.86     |
+
+---
+
+## 🏆 Final Model Selection
+
+EfficientNet-B0 was selected as the final deployment model because it consistently outperformed DenseNet-121 across all evaluation metrics, including accuracy, precision, recall, and F1-score.
+
+In medical image classification, recall is especially critical to minimize false negatives (i.e., missed tumor cases). EfficientNet achieved higher recall while maintaining strong precision and overall balance, making it the more reliable and clinically suitable model for deployment.
+
 
 ## 🔍 Explainable AI (Grad-CAM)
 
