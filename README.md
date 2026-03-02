@@ -61,6 +61,18 @@ data/
 
 ---
 
+## 🖼 Example Prediction
+
+Below is an example of the system predicting a brain tumor from an MRI image.
+
+### Input MRI Image
+<img width="510" height="739" alt="image" src="https://github.com/user-attachments/assets/b29a1584-ed7e-4fc8-b08b-7db69db75810" />
+
+### Model Prediction Output
+<img width="468" height="94" alt="image" src="https://github.com/user-attachments/assets/6f5f9382-f799-4664-8e02-6f6fc5a21da2" />
+
+---
+
 ## 🚀 Project Overview
 
 Manual analysis of brain MRI scans is time-consuming and requires expert radiologists.  
