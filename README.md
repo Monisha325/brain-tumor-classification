@@ -70,7 +70,8 @@ Below is an example of the system predicting a brain tumor from an MRI image.
 
 
 ### Model Prediction Output
-<img width="468" height="94" alt="image" src="https://github.com/user-attachments/assets/6f5f9382-f799-4664-8e02-6f6fc5a21da2" />
+<img width="480" height="622" alt="image" src="https://github.com/user-attachments/assets/5cee044f-4252-40f4-80fe-323016eaf012" />
+
 
 ---
 
